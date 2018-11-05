@@ -1,0 +1,36 @@
+mutation {
+  createStudent(student: {
+    username: "Arquitectura de Software"
+    password: "123"
+  }) {
+    username
+    password
+    code
+  }
+}
+
+{
+  allStudents{
+    code
+    username
+    password
+  }
+}
+
+mutation {
+  updateStudent(code: 3, student: {
+    username: "Arquitectura de Software"
+    password: "123"
+  }) {
+    username
+    password
+    code
+  }
+}
+
+mutation {
+  authenticateStudent(student: {
+    username: "juclozanome@unal.edu.co"
+    password: "1234"
+  })
+}
