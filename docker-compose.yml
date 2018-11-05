@@ -12,4 +12,4 @@ services:
       STUDENTS_PORT: '3001'
       STUDENTS_ENTRY: 'students-ms/resources/students'
     ports:
-      - '5000:5000'
+      - '5000:5000' 
