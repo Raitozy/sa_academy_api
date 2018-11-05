@@ -34,3 +34,53 @@ mutation {
     password: "1234"
   })
 }
+
+mutation {
+  deleteStudent(code: 3) 
+}
+
+-----------------------------------COURSES-------------------------------------
+
+mutation {
+  createCourse(course: {
+    name: "Arquitectura de Software"
+    credits: 3
+    professor: "Jeisson"
+  }) {
+    name
+  }
+}
+
+mutation {
+  updateCourse(code: 1, course: {
+    name: "Software Architecture"
+    credits: 3
+    professor: "Jeisson Vergara"
+  }) {
+    code
+    name
+    professor
+  }
+}
+
+query {
+  allCourses {
+    code
+    name
+    credits
+    professor
+  }
+}
+
+query {
+  courseByCode(code: 1) {
+    code
+    name
+    credits
+    professor
+  }
+}
+
+mutation {
+  deleteCourse(code: 2)
+} 
